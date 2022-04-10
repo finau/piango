@@ -1,0 +1,15 @@
+<div class="container justify-content-center mt-3 border-left border-right">
+
+    <div class="d-flex justify-content-center py-2">
+        <div class="second py-2 px-2"> <span class="text1"> {{ content.comment_body}}</span>
+            <div class="d-flex justify-content-between py-1 pt-2">
+                <div class="author-comment-img"> {{ user_picture }} <span class="text2"> {{ author }} </span> </div>
+                <div><span class="text3 text3o">{{content.flag_like_comment}}</span><span class="thumbup"><i class="fa fa-thumbs-up thumbupo"></i></span><span class="text4 text4i">1</span></div>
+                <div><span class="text3 text3o"> Posted: {{ created }} </span></div>
+                {% if logged_in %}
+                    <div><span class="text3 text3o"> {{ content.links }} </span></div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

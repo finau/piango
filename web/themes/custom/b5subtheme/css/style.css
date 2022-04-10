@@ -2488,7 +2488,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .node-preview-container .btn-check[disabled] + .node-preview-backlink, .btn-check[disabled] + .button, .btn-check[disabled] + button.link, .btn-check:disabled + .btn, .node-preview-container .btn-check:disabled + .node-preview-backlink, .btn-check:disabled + .button, .btn-check:disabled + button.link {
+.btn-check[disabled] + .btn, .node-preview-container .btn-check[disabled] + .node-preview-backlink, .btn-check[disabled] + .button, .flag-follow .btn-check[disabled] + a, .comment-add .btn-check[disabled] + a, .btn-check[disabled] + button.link, .btn-check:disabled + .btn, .node-preview-container .btn-check:disabled + .node-preview-backlink, .btn-check:disabled + .button, .flag-follow .btn-check:disabled + a, .comment-add .btn-check:disabled + a, .btn-check:disabled + button.link {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2647,11 +2647,11 @@ textarea.form-control-lg {
 .input-group > .form-select:focus {
   z-index: 3;
 }
-.input-group .btn, .input-group .node-preview-container .node-preview-backlink, .node-preview-container .input-group .node-preview-backlink, .input-group .button, .input-group button.link {
+.input-group .btn, .input-group .node-preview-container .node-preview-backlink, .node-preview-container .input-group .node-preview-backlink, .input-group .button, .input-group .flag-follow a, .flag-follow .input-group a, .input-group .comment-add a, .comment-add .input-group a, .input-group button.link {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group .node-preview-container .node-preview-backlink:focus, .node-preview-container .input-group .node-preview-backlink:focus, .input-group .button:focus, .input-group button.link:focus {
+.input-group .btn:focus, .input-group .node-preview-container .node-preview-backlink:focus, .node-preview-container .input-group .node-preview-backlink:focus, .input-group .button:focus, .input-group .flag-follow a:focus, .flag-follow .input-group a:focus, .input-group .comment-add a:focus, .comment-add .input-group a:focus, .input-group button.link:focus {
   z-index: 3;
 }
 
@@ -2676,6 +2676,8 @@ textarea.form-control-lg {
 .input-group-lg > .btn,
 .node-preview-container .input-group-lg > .node-preview-backlink,
 .input-group-lg > .button,
+.flag-follow .input-group-lg > a,
+.comment-add .input-group-lg > a,
 .input-group-lg > button.link {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -2688,6 +2690,8 @@ textarea.form-control-lg {
 .input-group-sm > .btn,
 .node-preview-container .input-group-sm > .node-preview-backlink,
 .input-group-sm > .button,
+.flag-follow .input-group-sm > a,
+.comment-add .input-group-sm > a,
 .input-group-sm > button.link {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -2893,7 +2897,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.btn, .node-preview-container .node-preview-backlink, a.button, .button, button.link {
+.btn, .node-preview-container .node-preview-backlink, a.button, .flag-follow a, .comment-add a, .button, button.link {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -2911,18 +2915,18 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .node-preview-container .node-preview-backlink, a.button, .button, button.link {
+  .btn, .node-preview-container .node-preview-backlink, a.button, .flag-follow a, .comment-add a, .button, button.link {
     transition: none;
   }
 }
-.btn:hover, .node-preview-container .node-preview-backlink:hover, .button:hover, button.link:hover {
+.btn:hover, .node-preview-container .node-preview-backlink:hover, .button:hover, .flag-follow a:hover, .comment-add a:hover, button.link:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .node-preview-container .btn-check:focus + .node-preview-backlink, .btn-check:focus + .button, .btn-check:focus + button.link, .btn:focus, .node-preview-container .node-preview-backlink:focus, .button:focus, button.link:focus {
+.btn-check:focus + .btn, .node-preview-container .btn-check:focus + .node-preview-backlink, .btn-check:focus + .button, .flag-follow .btn-check:focus + a, .comment-add .btn-check:focus + a, .btn-check:focus + button.link, .btn:focus, .node-preview-container .node-preview-backlink:focus, .button:focus, .flag-follow a:focus, .comment-add a:focus, button.link:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(0, 60, 197, 0.25);
 }
-.btn:disabled, .node-preview-container .node-preview-backlink:disabled, .button:disabled, button.link:disabled, .btn.disabled, .node-preview-container .disabled.node-preview-backlink, .disabled.button, button.disabled.link, fieldset:disabled .btn, fieldset:disabled .node-preview-container .node-preview-backlink, .node-preview-container fieldset:disabled .node-preview-backlink, fieldset:disabled .button, fieldset:disabled button.link {
+.btn:disabled, .node-preview-container .node-preview-backlink:disabled, .button:disabled, .flag-follow a:disabled, .comment-add a:disabled, button.link:disabled, .btn.disabled, .node-preview-container .disabled.node-preview-backlink, .disabled.button, .flag-follow a.disabled, .comment-add a.disabled, button.disabled.link, fieldset:disabled .btn, fieldset:disabled .node-preview-container .node-preview-backlink, .node-preview-container fieldset:disabled .node-preview-backlink, fieldset:disabled .button, fieldset:disabled .flag-follow a, .flag-follow fieldset:disabled a, fieldset:disabled .comment-add a, .comment-add fieldset:disabled a, fieldset:disabled button.link {
   pointer-events: none;
   opacity: 0.65;
 }
@@ -3379,13 +3383,13 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn, .node-preview-container .btn-group-lg > .node-preview-backlink, .btn-group-lg > .button, .btn-group-lg > button.link {
+.btn-lg, .btn-group-lg > .btn, .node-preview-container .btn-group-lg > .node-preview-backlink, .btn-group-lg > .button, .flag-follow .btn-group-lg > a, .comment-add .btn-group-lg > a, .btn-group-lg > button.link {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, .node-preview-container .btn-group-sm > .node-preview-backlink, .btn-group-sm > .button, .btn-group-sm > button.link {
+.btn-sm, .btn-group-sm > .btn, .node-preview-container .btn-group-sm > .node-preview-backlink, .btn-group-sm > .button, .flag-follow .btn-group-sm > a, .comment-add .btn-group-sm > a, .btn-group-sm > button.link {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -3740,30 +3744,40 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .node-preview-container .btn-group > .node-preview-backlink, .btn-group > .button, .btn-group > button.link,
+.btn-group > .btn, .node-preview-container .btn-group > .node-preview-backlink, .btn-group > .button, .flag-follow .btn-group > a, .comment-add .btn-group > a, .btn-group > button.link,
 .btn-group-vertical > .btn,
 .node-preview-container .btn-group-vertical > .node-preview-backlink,
 .btn-group-vertical > .button,
+.flag-follow .btn-group-vertical > a,
+.comment-add .btn-group-vertical > a,
 .btn-group-vertical > button.link {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, .node-preview-container .btn-group > .btn-check:checked + .node-preview-backlink, .btn-group > .btn-check:checked + .button, .btn-group > .btn-check:checked + button.link,
+.btn-group > .btn-check:checked + .btn, .node-preview-container .btn-group > .btn-check:checked + .node-preview-backlink, .btn-group > .btn-check:checked + .button, .flag-follow .btn-group > .btn-check:checked + a, .comment-add .btn-group > .btn-check:checked + a, .btn-group > .btn-check:checked + button.link,
 .btn-group > .btn-check:focus + .btn,
 .node-preview-container .btn-group > .btn-check:focus + .node-preview-backlink,
 .btn-group > .btn-check:focus + .button,
+.flag-follow .btn-group > .btn-check:focus + a,
+.comment-add .btn-group > .btn-check:focus + a,
 .btn-group > .btn-check:focus + button.link,
 .btn-group > .btn:hover,
 .node-preview-container .btn-group > .node-preview-backlink:hover,
 .btn-group > .button:hover,
+.flag-follow .btn-group > a:hover,
+.comment-add .btn-group > a:hover,
 .btn-group > button.link:hover,
 .btn-group > .btn:focus,
 .node-preview-container .btn-group > .node-preview-backlink:focus,
 .btn-group > .button:focus,
+.flag-follow .btn-group > a:focus,
+.comment-add .btn-group > a:focus,
 .btn-group > button.link:focus,
 .btn-group > .btn:active,
 .node-preview-container .btn-group > .node-preview-backlink:active,
 .btn-group > .button:active,
+.flag-follow .btn-group > a:active,
+.comment-add .btn-group > a:active,
 .btn-group > button.link:active,
 .btn-group > .btn.active,
 .media-library-view--widget .view-header .btn-group > a.btn.is-active,
@@ -3771,27 +3785,43 @@ textarea.form-control-lg {
 .node-preview-container .media-library-view--widget .view-header .btn-group > a.node-preview-backlink.is-active,
 .media-library-view--widget .view-header .node-preview-container .btn-group > a.node-preview-backlink.is-active,
 .btn-group > .active.button,
+.flag-follow .btn-group > a.active,
+.comment-add .btn-group > a.active,
 .media-library-view--widget .view-header .btn-group > a.button.is-active,
+.media-library-view--widget .view-header .flag-follow .btn-group > a.is-active,
+.flag-follow .media-library-view--widget .view-header .btn-group > a.is-active,
+.media-library-view--widget .view-header .comment-add .btn-group > a.is-active,
+.comment-add .media-library-view--widget .view-header .btn-group > a.is-active,
 .btn-group > button.active.link,
 .btn-group-vertical > .btn-check:checked + .btn,
 .node-preview-container .btn-group-vertical > .btn-check:checked + .node-preview-backlink,
 .btn-group-vertical > .btn-check:checked + .button,
+.flag-follow .btn-group-vertical > .btn-check:checked + a,
+.comment-add .btn-group-vertical > .btn-check:checked + a,
 .btn-group-vertical > .btn-check:checked + button.link,
 .btn-group-vertical > .btn-check:focus + .btn,
 .node-preview-container .btn-group-vertical > .btn-check:focus + .node-preview-backlink,
 .btn-group-vertical > .btn-check:focus + .button,
+.flag-follow .btn-group-vertical > .btn-check:focus + a,
+.comment-add .btn-group-vertical > .btn-check:focus + a,
 .btn-group-vertical > .btn-check:focus + button.link,
 .btn-group-vertical > .btn:hover,
 .node-preview-container .btn-group-vertical > .node-preview-backlink:hover,
 .btn-group-vertical > .button:hover,
+.flag-follow .btn-group-vertical > a:hover,
+.comment-add .btn-group-vertical > a:hover,
 .btn-group-vertical > button.link:hover,
 .btn-group-vertical > .btn:focus,
 .node-preview-container .btn-group-vertical > .node-preview-backlink:focus,
 .btn-group-vertical > .button:focus,
+.flag-follow .btn-group-vertical > a:focus,
+.comment-add .btn-group-vertical > a:focus,
 .btn-group-vertical > button.link:focus,
 .btn-group-vertical > .btn:active,
 .node-preview-container .btn-group-vertical > .node-preview-backlink:active,
 .btn-group-vertical > .button:active,
+.flag-follow .btn-group-vertical > a:active,
+.comment-add .btn-group-vertical > a:active,
 .btn-group-vertical > button.link:active,
 .btn-group-vertical > .btn.active,
 .media-library-view--widget .view-header .btn-group-vertical > a.btn.is-active,
@@ -3799,7 +3829,13 @@ textarea.form-control-lg {
 .node-preview-container .media-library-view--widget .view-header .btn-group-vertical > a.node-preview-backlink.is-active,
 .media-library-view--widget .view-header .node-preview-container .btn-group-vertical > a.node-preview-backlink.is-active,
 .btn-group-vertical > .active.button,
+.flag-follow .btn-group-vertical > a.active,
+.comment-add .btn-group-vertical > a.active,
 .media-library-view--widget .view-header .btn-group-vertical > a.button.is-active,
+.media-library-view--widget .view-header .flag-follow .btn-group-vertical > a.is-active,
+.flag-follow .media-library-view--widget .view-header .btn-group-vertical > a.is-active,
+.media-library-view--widget .view-header .comment-add .btn-group-vertical > a.is-active,
+.comment-add .media-library-view--widget .view-header .btn-group-vertical > a.is-active,
 .btn-group-vertical > button.active.link {
   z-index: 1;
 }
@@ -3813,26 +3849,32 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child), .node-preview-container .btn-group > .node-preview-backlink:not(:first-child), .btn-group > .button:not(:first-child), .btn-group > button.link:not(:first-child),
+.btn-group > .btn:not(:first-child), .node-preview-container .btn-group > .node-preview-backlink:not(:first-child), .btn-group > .button:not(:first-child), .flag-follow .btn-group > a:not(:first-child), .comment-add .btn-group > a:not(:first-child), .btn-group > button.link:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .node-preview-container .btn-group > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .btn-group > .button:not(:last-child):not(.dropdown-toggle), .btn-group > button.link:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .node-preview-container .btn-group > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .btn-group > .button:not(:last-child):not(.dropdown-toggle), .flag-follow .btn-group > a:not(:last-child):not(.dropdown-toggle), .comment-add .btn-group > a:not(:last-child):not(.dropdown-toggle), .btn-group > button.link:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .node-preview-container .btn-group > .btn-group:not(:last-child) > .node-preview-backlink,
 .btn-group > .btn-group:not(:last-child) > .button,
+.flag-follow .btn-group > .btn-group:not(:last-child) > a,
+.comment-add .btn-group > .btn-group:not(:last-child) > a,
 .btn-group > .btn-group:not(:last-child) > button.link {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), .node-preview-container .btn-group > .node-preview-backlink:nth-child(n+3), .btn-group > .button:nth-child(n+3), .btn-group > button.link:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .node-preview-container .btn-group > .node-preview-backlink:nth-child(n+3), .btn-group > .button:nth-child(n+3), .flag-follow .btn-group > a:nth-child(n+3), .comment-add .btn-group > a:nth-child(n+3), .btn-group > button.link:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
 .node-preview-container .btn-group > :not(.btn-check) + .node-preview-backlink,
 .btn-group > :not(.btn-check) + .button,
+.flag-follow .btn-group > :not(.btn-check) + a,
+.comment-add .btn-group > :not(.btn-check) + a,
 .btn-group > :not(.btn-check) + button.link,
 .btn-group > .btn-group:not(:first-child) > .btn,
 .node-preview-container .btn-group > .btn-group:not(:first-child) > .node-preview-backlink,
 .btn-group > .btn-group:not(:first-child) > .button,
+.flag-follow .btn-group > .btn-group:not(:first-child) > a,
+.comment-add .btn-group > .btn-group:not(:first-child) > a,
 .btn-group > .btn-group:not(:first-child) > button.link {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -3849,12 +3891,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .node-preview-container .btn-group-sm > .node-preview-backlink + .dropdown-toggle-split, .btn-group-sm > .button + .dropdown-toggle-split, .btn-group-sm > button.link + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .node-preview-container .btn-group-sm > .node-preview-backlink + .dropdown-toggle-split, .btn-group-sm > .button + .dropdown-toggle-split, .flag-follow .btn-group-sm > a + .dropdown-toggle-split, .comment-add .btn-group-sm > a + .dropdown-toggle-split, .btn-group-sm > button.link + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .node-preview-container .btn-group-lg > .node-preview-backlink + .dropdown-toggle-split, .btn-group-lg > .button + .dropdown-toggle-split, .btn-group-lg > button.link + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .node-preview-container .btn-group-lg > .node-preview-backlink + .dropdown-toggle-split, .btn-group-lg > .button + .dropdown-toggle-split, .flag-follow .btn-group-lg > a + .dropdown-toggle-split, .comment-add .btn-group-lg > a + .dropdown-toggle-split, .btn-group-lg > button.link + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3864,26 +3906,30 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, .node-preview-container .btn-group-vertical > .node-preview-backlink, .btn-group-vertical > .button, .btn-group-vertical > button.link,
+.btn-group-vertical > .btn, .node-preview-container .btn-group-vertical > .node-preview-backlink, .btn-group-vertical > .button, .flag-follow .btn-group-vertical > a, .comment-add .btn-group-vertical > a, .btn-group-vertical > button.link,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), .node-preview-container .btn-group-vertical > .node-preview-backlink:not(:first-child), .btn-group-vertical > .button:not(:first-child), .btn-group-vertical > button.link:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .node-preview-container .btn-group-vertical > .node-preview-backlink:not(:first-child), .btn-group-vertical > .button:not(:first-child), .flag-follow .btn-group-vertical > a:not(:first-child), .comment-add .btn-group-vertical > a:not(:first-child), .btn-group-vertical > button.link:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .node-preview-container .btn-group-vertical > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .button:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > button.link:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .node-preview-container .btn-group-vertical > .node-preview-backlink:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .button:not(:last-child):not(.dropdown-toggle), .flag-follow .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), .comment-add .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > button.link:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
 .node-preview-container .btn-group-vertical > .btn-group:not(:last-child) > .node-preview-backlink,
 .btn-group-vertical > .btn-group:not(:last-child) > .button,
+.flag-follow .btn-group-vertical > .btn-group:not(:last-child) > a,
+.comment-add .btn-group-vertical > .btn-group:not(:last-child) > a,
 .btn-group-vertical > .btn-group:not(:last-child) > button.link {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, .node-preview-container .btn-group-vertical > .node-preview-backlink ~ .btn, .node-preview-container .btn-group-vertical > .btn ~ .node-preview-backlink, .node-preview-container .btn-group-vertical > .node-preview-backlink ~ .node-preview-backlink, .btn-group-vertical > .button ~ .btn, .node-preview-container .btn-group-vertical > .button ~ .node-preview-backlink, .btn-group-vertical > .btn ~ .button, .node-preview-container .btn-group-vertical > .node-preview-backlink ~ .button, .btn-group-vertical > .button ~ .button, .btn-group-vertical > button.link ~ .btn, .node-preview-container .btn-group-vertical > button.link ~ .node-preview-backlink, .btn-group-vertical > button.link ~ .button, .btn-group-vertical > .btn ~ button.link, .node-preview-container .btn-group-vertical > .node-preview-backlink ~ button.link, .btn-group-vertical > .button ~ button.link, .btn-group-vertical > button.link ~ button.link,
+.btn-group-vertical > .btn ~ .btn, .node-preview-container .btn-group-vertical > .node-preview-backlink ~ .btn, .node-preview-container .btn-group-vertical > .btn ~ .node-preview-backlink, .node-preview-container .btn-group-vertical > .node-preview-backlink ~ .node-preview-backlink, .btn-group-vertical > .button ~ .btn, .flag-follow .btn-group-vertical > a ~ .btn, .comment-add .btn-group-vertical > a ~ .btn, .node-preview-container .btn-group-vertical > .button ~ .node-preview-backlink, .node-preview-container .flag-follow .btn-group-vertical > a ~ .node-preview-backlink, .flag-follow .node-preview-container .btn-group-vertical > a ~ .node-preview-backlink, .node-preview-container .comment-add .btn-group-vertical > a ~ .node-preview-backlink, .comment-add .node-preview-container .btn-group-vertical > a ~ .node-preview-backlink, .btn-group-vertical > .btn ~ .button, .flag-follow .btn-group-vertical > .btn ~ a, .comment-add .btn-group-vertical > .btn ~ a, .node-preview-container .btn-group-vertical > .node-preview-backlink ~ .button, .node-preview-container .flag-follow .btn-group-vertical > .node-preview-backlink ~ a, .flag-follow .node-preview-container .btn-group-vertical > .node-preview-backlink ~ a, .node-preview-container .comment-add .btn-group-vertical > .node-preview-backlink ~ a, .comment-add .node-preview-container .btn-group-vertical > .node-preview-backlink ~ a, .btn-group-vertical > .button ~ .button, .flag-follow .btn-group-vertical > a ~ .button, .flag-follow .btn-group-vertical > .button ~ a, .flag-follow .btn-group-vertical > a ~ a, .comment-add .btn-group-vertical > a ~ .button, .comment-add .btn-group-vertical > .button ~ a, .comment-add .btn-group-vertical > a ~ a, .btn-group-vertical > button.link ~ .btn, .node-preview-container .btn-group-vertical > button.link ~ .node-preview-backlink, .btn-group-vertical > button.link ~ .button, .flag-follow .btn-group-vertical > button.link ~ a, .comment-add .btn-group-vertical > button.link ~ a, .btn-group-vertical > .btn ~ button.link, .node-preview-container .btn-group-vertical > .node-preview-backlink ~ button.link, .btn-group-vertical > .button ~ button.link, .flag-follow .btn-group-vertical > a ~ button.link, .comment-add .btn-group-vertical > a ~ button.link, .btn-group-vertical > button.link ~ button.link,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
 .node-preview-container .btn-group-vertical > .btn-group:not(:first-child) > .node-preview-backlink,
 .btn-group-vertical > .btn-group:not(:first-child) > .button,
+.flag-follow .btn-group-vertical > .btn-group:not(:first-child) > a,
+.comment-add .btn-group-vertical > .btn-group:not(:first-child) > a,
 .btn-group-vertical > .btn-group:not(:first-child) > button.link {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -5003,7 +5049,7 @@ fieldset.form-item > .list-group + .card-footer {
   display: none;
 }
 
-.btn .badge, .node-preview-container .node-preview-backlink .badge, .button .badge, button.link .badge {
+.btn .badge, .node-preview-container .node-preview-backlink .badge, .button .badge, .flag-follow a .badge, .comment-add a .badge, button.link .badge {
   position: relative;
   top: -1px;
 }
@@ -6448,7 +6494,7 @@ fieldset.form-item > .list-group + .card-footer {
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before, .node-preview-container .placeholder.node-preview-backlink::before, .placeholder.button::before, button.placeholder.link::before {
+.placeholder.btn::before, .node-preview-container .placeholder.node-preview-backlink::before, .placeholder.button::before, .flag-follow a.placeholder::before, .comment-add a.placeholder::before, button.placeholder.link::before {
   display: inline-block;
   content: "";
 }
@@ -11354,97 +11400,97 @@ fieldset.form-item > .list-group + .card-footer {
   border-radius: 0.2rem;
 }
 
-a.button {
+a.button, .flag-follow a, .comment-add a {
   text-decoration: none;
 }
-a.button.button--primary {
+a.button.button--primary, .flag-follow a, .comment-add a {
   color: #fff;
   background-color: #003CC5;
   border-color: #003CC5;
 }
-a.button.button--primary:hover {
+a.button.button--primary:hover, .flag-follow a:hover, .comment-add a:hover {
   color: #fff;
   background-color: #0033a7;
   border-color: #00309e;
 }
-.btn-check:focus + a.button.button--primary, a.button.button--primary:focus {
+.btn-check:focus + a.button.button--primary, .flag-follow .btn-check:focus + a, .comment-add .btn-check:focus + a, a.button.button--primary:focus, .flag-follow a:focus, .comment-add a:focus {
   color: #fff;
   background-color: #0033a7;
   border-color: #00309e;
   box-shadow: 0 0 0 0.25rem rgba(38, 89, 206, 0.5);
 }
-.btn-check:checked + a.button.button--primary, .btn-check:active + a.button.button--primary, a.button.button--primary:active, a.button.button--primary.active, .media-library-view--widget .view-header a.button.button--primary.is-active, .show > a.button.button--primary.dropdown-toggle {
+.btn-check:checked + a.button.button--primary, .flag-follow .btn-check:checked + a, .comment-add .btn-check:checked + a, .btn-check:active + a.button.button--primary, .flag-follow .btn-check:active + a, .comment-add .btn-check:active + a, a.button.button--primary:active, .flag-follow a:active, .comment-add a:active, a.button.button--primary.active, .flag-follow a.active, .comment-add a.active, .media-library-view--widget .view-header a.button.button--primary.is-active, .media-library-view--widget .view-header .flag-follow a.is-active, .flag-follow .media-library-view--widget .view-header a.is-active, .media-library-view--widget .view-header .comment-add a.is-active, .comment-add .media-library-view--widget .view-header a.is-active, .show > a.button.button--primary.dropdown-toggle, .flag-follow .show > a.dropdown-toggle, .comment-add .show > a.dropdown-toggle {
   color: #fff;
   background-color: #00309e;
   border-color: #002d94;
 }
-.btn-check:checked + a.button.button--primary:focus, .btn-check:active + a.button.button--primary:focus, a.button.button--primary:active:focus, a.button.button--primary.active:focus, .media-library-view--widget .view-header a.button.button--primary.is-active:focus, .show > a.button.button--primary.dropdown-toggle:focus {
+.btn-check:checked + a.button.button--primary:focus, .flag-follow .btn-check:checked + a:focus, .comment-add .btn-check:checked + a:focus, .btn-check:active + a.button.button--primary:focus, .flag-follow .btn-check:active + a:focus, .comment-add .btn-check:active + a:focus, a.button.button--primary:active:focus, .flag-follow a:active:focus, .comment-add a:active:focus, a.button.button--primary.active:focus, .flag-follow a.active:focus, .comment-add a.active:focus, .media-library-view--widget .view-header a.button.button--primary.is-active:focus, .media-library-view--widget .view-header .flag-follow a.is-active:focus, .flag-follow .media-library-view--widget .view-header a.is-active:focus, .media-library-view--widget .view-header .comment-add a.is-active:focus, .comment-add .media-library-view--widget .view-header a.is-active:focus, .show > a.button.button--primary.dropdown-toggle:focus, .flag-follow .show > a.dropdown-toggle:focus, .comment-add .show > a.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgba(38, 89, 206, 0.5);
 }
-a.button.button--primary:disabled, a.button.button--primary.disabled {
+a.button.button--primary:disabled, .flag-follow a:disabled, .comment-add a:disabled, a.button.button--primary.disabled, .flag-follow a.disabled, .comment-add a.disabled {
   color: #fff;
   background-color: #003CC5;
   border-color: #003CC5;
 }
-a.button.button--danger {
+a.button.button--danger, .flag-follow a.button--danger, .comment-add a.button--danger {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
 }
-a.button.button--danger:hover {
+a.button.button--danger:hover, .flag-follow a.button--danger:hover, .comment-add a.button--danger:hover {
   color: #fff;
   background-color: #bb2d3b;
   border-color: #b02a37;
 }
-.btn-check:focus + a.button.button--danger, a.button.button--danger:focus {
+.btn-check:focus + a.button.button--danger, .flag-follow .btn-check:focus + a.button--danger, .comment-add .btn-check:focus + a.button--danger, a.button.button--danger:focus, .flag-follow a.button--danger:focus, .comment-add a.button--danger:focus {
   color: #fff;
   background-color: #bb2d3b;
   border-color: #b02a37;
   box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
 }
-.btn-check:checked + a.button.button--danger, .btn-check:active + a.button.button--danger, a.button.button--danger:active, a.button.button--danger.active, .media-library-view--widget .view-header a.button.button--danger.is-active, .show > a.button.button--danger.dropdown-toggle {
+.btn-check:checked + a.button.button--danger, .flag-follow .btn-check:checked + a.button--danger, .comment-add .btn-check:checked + a.button--danger, .btn-check:active + a.button.button--danger, .flag-follow .btn-check:active + a.button--danger, .comment-add .btn-check:active + a.button--danger, a.button.button--danger:active, .flag-follow a.button--danger:active, .comment-add a.button--danger:active, a.button.button--danger.active, .flag-follow a.button--danger.active, .comment-add a.button--danger.active, .media-library-view--widget .view-header a.button.button--danger.is-active, .media-library-view--widget .view-header .flag-follow a.button--danger.is-active, .flag-follow .media-library-view--widget .view-header a.button--danger.is-active, .media-library-view--widget .view-header .comment-add a.button--danger.is-active, .comment-add .media-library-view--widget .view-header a.button--danger.is-active, .show > a.button.button--danger.dropdown-toggle, .flag-follow .show > a.button--danger.dropdown-toggle, .comment-add .show > a.button--danger.dropdown-toggle {
   color: #fff;
   background-color: #b02a37;
   border-color: #a52834;
 }
-.btn-check:checked + a.button.button--danger:focus, .btn-check:active + a.button.button--danger:focus, a.button.button--danger:active:focus, a.button.button--danger.active:focus, .media-library-view--widget .view-header a.button.button--danger.is-active:focus, .show > a.button.button--danger.dropdown-toggle:focus {
+.btn-check:checked + a.button.button--danger:focus, .flag-follow .btn-check:checked + a.button--danger:focus, .comment-add .btn-check:checked + a.button--danger:focus, .btn-check:active + a.button.button--danger:focus, .flag-follow .btn-check:active + a.button--danger:focus, .comment-add .btn-check:active + a.button--danger:focus, a.button.button--danger:active:focus, .flag-follow a.button--danger:active:focus, .comment-add a.button--danger:active:focus, a.button.button--danger.active:focus, .flag-follow a.button--danger.active:focus, .comment-add a.button--danger.active:focus, .media-library-view--widget .view-header a.button.button--danger.is-active:focus, .media-library-view--widget .view-header .flag-follow a.button--danger.is-active:focus, .flag-follow .media-library-view--widget .view-header a.button--danger.is-active:focus, .media-library-view--widget .view-header .comment-add a.button--danger.is-active:focus, .comment-add .media-library-view--widget .view-header a.button--danger.is-active:focus, .show > a.button.button--danger.dropdown-toggle:focus, .flag-follow .show > a.button--danger.dropdown-toggle:focus, .comment-add .show > a.button--danger.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
 }
-a.button.button--danger:disabled, a.button.button--danger.disabled {
+a.button.button--danger:disabled, .flag-follow a.button--danger:disabled, .comment-add a.button--danger:disabled, a.button.button--danger.disabled, .flag-follow a.button--danger.disabled, .comment-add a.button--danger.disabled {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
 }
-a.button.button-action {
+a.button.button-action, .flag-follow a.button-action, .comment-add a.button-action {
   color: #000;
   background-color: #0dcaf0;
   border-color: #0dcaf0;
 }
-a.button.button-action:hover {
+a.button.button-action:hover, .flag-follow a.button-action:hover, .comment-add a.button-action:hover {
   color: #000;
   background-color: #31d2f2;
   border-color: #25cff2;
 }
-.btn-check:focus + a.button.button-action, a.button.button-action:focus {
+.btn-check:focus + a.button.button-action, .flag-follow .btn-check:focus + a.button-action, .comment-add .btn-check:focus + a.button-action, a.button.button-action:focus, .flag-follow a.button-action:focus, .comment-add a.button-action:focus {
   color: #000;
   background-color: #31d2f2;
   border-color: #25cff2;
   box-shadow: 0 0 0 0.25rem rgba(11, 172, 204, 0.5);
 }
-.btn-check:checked + a.button.button-action, .btn-check:active + a.button.button-action, a.button.button-action:active, a.button.button-action.active, .media-library-view--widget .view-header a.button.button-action.is-active, .show > a.button.button-action.dropdown-toggle {
+.btn-check:checked + a.button.button-action, .flag-follow .btn-check:checked + a.button-action, .comment-add .btn-check:checked + a.button-action, .btn-check:active + a.button.button-action, .flag-follow .btn-check:active + a.button-action, .comment-add .btn-check:active + a.button-action, a.button.button-action:active, .flag-follow a.button-action:active, .comment-add a.button-action:active, a.button.button-action.active, .flag-follow a.button-action.active, .comment-add a.button-action.active, .media-library-view--widget .view-header a.button.button-action.is-active, .media-library-view--widget .view-header .flag-follow a.button-action.is-active, .flag-follow .media-library-view--widget .view-header a.button-action.is-active, .media-library-view--widget .view-header .comment-add a.button-action.is-active, .comment-add .media-library-view--widget .view-header a.button-action.is-active, .show > a.button.button-action.dropdown-toggle, .flag-follow .show > a.button-action.dropdown-toggle, .comment-add .show > a.button-action.dropdown-toggle {
   color: #000;
   background-color: #3dd5f3;
   border-color: #25cff2;
 }
-.btn-check:checked + a.button.button-action:focus, .btn-check:active + a.button.button-action:focus, a.button.button-action:active:focus, a.button.button-action.active:focus, .media-library-view--widget .view-header a.button.button-action.is-active:focus, .show > a.button.button-action.dropdown-toggle:focus {
+.btn-check:checked + a.button.button-action:focus, .flag-follow .btn-check:checked + a.button-action:focus, .comment-add .btn-check:checked + a.button-action:focus, .btn-check:active + a.button.button-action:focus, .flag-follow .btn-check:active + a.button-action:focus, .comment-add .btn-check:active + a.button-action:focus, a.button.button-action:active:focus, .flag-follow a.button-action:active:focus, .comment-add a.button-action:active:focus, a.button.button-action.active:focus, .flag-follow a.button-action.active:focus, .comment-add a.button-action.active:focus, .media-library-view--widget .view-header a.button.button-action.is-active:focus, .media-library-view--widget .view-header .flag-follow a.button-action.is-active:focus, .flag-follow .media-library-view--widget .view-header a.button-action.is-active:focus, .media-library-view--widget .view-header .comment-add a.button-action.is-active:focus, .comment-add .media-library-view--widget .view-header a.button-action.is-active:focus, .show > a.button.button-action.dropdown-toggle:focus, .flag-follow .show > a.button-action.dropdown-toggle:focus, .comment-add .show > a.button-action.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgba(11, 172, 204, 0.5);
 }
-a.button.button-action:disabled, a.button.button-action.disabled {
+a.button.button-action:disabled, .flag-follow a.button-action:disabled, .comment-add a.button-action:disabled, a.button.button-action.disabled, .flag-follow a.button-action.disabled, .comment-add a.button-action.disabled {
   color: #000;
   background-color: #0dcaf0;
   border-color: #0dcaf0;
 }
-a.button.button--small {
+a.button.button--small, .flag-follow a.button--small, .comment-add a.button--small {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -11578,21 +11624,29 @@ a.button.button--small {
   text-decoration: none;
 }
 
-.btn, .node-preview-container .node-preview-backlink, button.link, a.button,
+.btn, .node-preview-container .node-preview-backlink, button.link, a.button, .flag-follow a, .comment-add a,
 .button {
   margin: 0 0.5rem;
 }
 .btn:first-child, .node-preview-container .node-preview-backlink:first-child, button.link:first-child,
-.button:first-child {
+.button:first-child,
+.flag-follow a:first-child,
+.comment-add a:first-child {
   margin-left: 0;
 }
 .btn:last-child, .node-preview-container .node-preview-backlink:last-child, button.link:last-child,
-.button:last-child {
+.button:last-child,
+.flag-follow a:last-child,
+.comment-add a:last-child {
   margin-right: 0;
 }
 
 .btn-group .btn, .btn-group .node-preview-container .node-preview-backlink, .node-preview-container .btn-group .node-preview-backlink, .btn-group button.link,
-.btn-group .button {
+.btn-group .button,
+.btn-group .flag-follow a,
+.flag-follow .btn-group a,
+.btn-group .comment-add a,
+.comment-add .btn-group a {
   margin: 0;
 }
 
@@ -11689,10 +11743,10 @@ td > .form-item {
   font-weight: 700;
 }
 
-.paragraphs-dropdown-action.button.btn-primary {
+.paragraphs-dropdown-action.button.btn-primary, .flag-follow a.paragraphs-dropdown-action.btn-primary, .comment-add a.paragraphs-dropdown-action.btn-primary {
   background-color: #003CC5;
 }
-.paragraphs-dropdown-action.button.btn-danger {
+.paragraphs-dropdown-action.button.btn-danger, .flag-follow a.paragraphs-dropdown-action.btn-danger, .comment-add a.paragraphs-dropdown-action.btn-danger {
   background-color: #dc3545;
 }
 
@@ -11890,31 +11944,31 @@ table {
   background-color: unset;
 }
 
-.region-title__action a.button {
+.region-title__action a.button, .region-title__action .flag-follow a, .flag-follow .region-title__action a, .region-title__action .comment-add a, .comment-add .region-title__action a {
   color: #fff;
   background-color: #003CC5;
   border-color: #003CC5;
 }
-.region-title__action a.button:hover {
+.region-title__action a.button:hover, .region-title__action .flag-follow a:hover, .flag-follow .region-title__action a:hover, .region-title__action .comment-add a:hover, .comment-add .region-title__action a:hover {
   color: #fff;
   background-color: #0033a7;
   border-color: #00309e;
 }
-.btn-check:focus + .region-title__action a.button, .region-title__action a.button:focus {
+.btn-check:focus + .region-title__action a.button, .btn-check:focus + .region-title__action .flag-follow a, .flag-follow .btn-check:focus + .region-title__action a, .btn-check:focus + .region-title__action .comment-add a, .comment-add .btn-check:focus + .region-title__action a, .region-title__action a.button:focus, .region-title__action .flag-follow a:focus, .flag-follow .region-title__action a:focus, .region-title__action .comment-add a:focus, .comment-add .region-title__action a:focus {
   color: #fff;
   background-color: #0033a7;
   border-color: #00309e;
   box-shadow: 0 0 0 0.25rem rgba(38, 89, 206, 0.5);
 }
-.btn-check:checked + .region-title__action a.button, .btn-check:active + .region-title__action a.button, .region-title__action a.button:active, .region-title__action a.button.active, .region-title__action .media-library-view--widget .view-header a.button.is-active, .media-library-view--widget .view-header .region-title__action a.button.is-active, .show > .region-title__action a.button.dropdown-toggle {
+.btn-check:checked + .region-title__action a.button, .btn-check:checked + .region-title__action .flag-follow a, .flag-follow .btn-check:checked + .region-title__action a, .btn-check:checked + .region-title__action .comment-add a, .comment-add .btn-check:checked + .region-title__action a, .btn-check:active + .region-title__action a.button, .btn-check:active + .region-title__action .flag-follow a, .flag-follow .btn-check:active + .region-title__action a, .btn-check:active + .region-title__action .comment-add a, .comment-add .btn-check:active + .region-title__action a, .region-title__action a.button:active, .region-title__action .flag-follow a:active, .flag-follow .region-title__action a:active, .region-title__action .comment-add a:active, .comment-add .region-title__action a:active, .region-title__action a.button.active, .region-title__action .flag-follow a.active, .flag-follow .region-title__action a.active, .region-title__action .comment-add a.active, .comment-add .region-title__action a.active, .region-title__action .media-library-view--widget .view-header a.button.is-active, .region-title__action .media-library-view--widget .view-header .flag-follow a.is-active, .flag-follow .region-title__action .media-library-view--widget .view-header a.is-active, .region-title__action .media-library-view--widget .view-header .comment-add a.is-active, .comment-add .region-title__action .media-library-view--widget .view-header a.is-active, .media-library-view--widget .view-header .region-title__action a.button.is-active, .media-library-view--widget .view-header .region-title__action .flag-follow a.is-active, .flag-follow .media-library-view--widget .view-header .region-title__action a.is-active, .media-library-view--widget .view-header .region-title__action .comment-add a.is-active, .comment-add .media-library-view--widget .view-header .region-title__action a.is-active, .show > .region-title__action a.button.dropdown-toggle, .show > .region-title__action .flag-follow a.dropdown-toggle, .flag-follow .show > .region-title__action a.dropdown-toggle, .show > .region-title__action .comment-add a.dropdown-toggle, .comment-add .show > .region-title__action a.dropdown-toggle {
   color: #fff;
   background-color: #00309e;
   border-color: #002d94;
 }
-.btn-check:checked + .region-title__action a.button:focus, .btn-check:active + .region-title__action a.button:focus, .region-title__action a.button:active:focus, .region-title__action a.button.active:focus, .region-title__action .media-library-view--widget .view-header a.button.is-active:focus, .media-library-view--widget .view-header .region-title__action a.button.is-active:focus, .show > .region-title__action a.button.dropdown-toggle:focus {
+.btn-check:checked + .region-title__action a.button:focus, .btn-check:checked + .region-title__action .flag-follow a:focus, .flag-follow .btn-check:checked + .region-title__action a:focus, .btn-check:checked + .region-title__action .comment-add a:focus, .comment-add .btn-check:checked + .region-title__action a:focus, .btn-check:active + .region-title__action a.button:focus, .btn-check:active + .region-title__action .flag-follow a:focus, .flag-follow .btn-check:active + .region-title__action a:focus, .btn-check:active + .region-title__action .comment-add a:focus, .comment-add .btn-check:active + .region-title__action a:focus, .region-title__action a.button:active:focus, .region-title__action .flag-follow a:active:focus, .flag-follow .region-title__action a:active:focus, .region-title__action .comment-add a:active:focus, .comment-add .region-title__action a:active:focus, .region-title__action a.button.active:focus, .region-title__action .flag-follow a.active:focus, .flag-follow .region-title__action a.active:focus, .region-title__action .comment-add a.active:focus, .comment-add .region-title__action a.active:focus, .region-title__action .media-library-view--widget .view-header a.button.is-active:focus, .region-title__action .media-library-view--widget .view-header .flag-follow a.is-active:focus, .flag-follow .region-title__action .media-library-view--widget .view-header a.is-active:focus, .region-title__action .media-library-view--widget .view-header .comment-add a.is-active:focus, .comment-add .region-title__action .media-library-view--widget .view-header a.is-active:focus, .media-library-view--widget .view-header .region-title__action a.button.is-active:focus, .media-library-view--widget .view-header .region-title__action .flag-follow a.is-active:focus, .flag-follow .media-library-view--widget .view-header .region-title__action a.is-active:focus, .media-library-view--widget .view-header .region-title__action .comment-add a.is-active:focus, .comment-add .media-library-view--widget .view-header .region-title__action a.is-active:focus, .show > .region-title__action a.button.dropdown-toggle:focus, .show > .region-title__action .flag-follow a.dropdown-toggle:focus, .flag-follow .show > .region-title__action a.dropdown-toggle:focus, .show > .region-title__action .comment-add a.dropdown-toggle:focus, .comment-add .show > .region-title__action a.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgba(38, 89, 206, 0.5);
 }
-.region-title__action a.button:disabled, .region-title__action a.button.disabled {
+.region-title__action a.button:disabled, .region-title__action .flag-follow a:disabled, .flag-follow .region-title__action a:disabled, .region-title__action .comment-add a:disabled, .comment-add .region-title__action a:disabled, .region-title__action a.button.disabled, .region-title__action .flag-follow a.disabled, .flag-follow .region-title__action a.disabled, .region-title__action .comment-add a.disabled, .comment-add .region-title__action a.disabled {
   color: #fff;
   background-color: #003CC5;
   border-color: #003CC5;
@@ -12214,6 +12268,113 @@ code {
 
 header .bg-dark {
   background-color: #2C9543 !important;
+}
+
+.menu--account .nav, .menu--account .media-library-view--widget .view-header, .media-library-view--widget .menu--account .view-header {
+  flex-direction: row !important;
+  justify-content: flex-end;
+}
+
+.field--name-user-picture img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.block-views-blocksubmission-info-box-block-1,
+.block-views-blocksubmission-actions-block-1 {
+  background-color: #cccccc;
+  padding: 20px;
+}
+
+.block-views-blocksubmission-info-box-block-1 h2, .block-views-blocksubmission-info-box-block-1 .h2,
+.block-views-blocksubmission-actions-block-1 h2,
+.block-views-blocksubmission-actions-block-1 .h2 {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.region-sidebar-second .block {
+  margin-bottom: 20px;
+}
+
+.view-submission-lists .card, .view-submission-lists fieldset.form-item, .view-submission-lists .form-item-upload, .view-submission-lists .form-type-managed-file, .view-submission-lists .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity, .view-media-library .media-library-views-form .media-library-item--grid .view-submission-lists .views-field-rendered-entity, .view-submission-lists .media-library-selection .media-library-item.media-library-item--grid, .media-library-selection .view-submission-lists .media-library-item.media-library-item--grid {
+  margin-bottom: 20px;
+}
+
+.flag-follow {
+  margin: 10px 0 10px;
+}
+
+.addtxt {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 13px;
+  width: 350px;
+  background-color: #e5e8ed;
+  font-weight: 500;
+}
+
+.form-control focus {
+  color: #000;
+}
+
+.second {
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  padding: 20px !important;
+  border: 1px solid #aaaaaa;
+}
+
+.text2 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 6px;
+  color: #56575b;
+}
+
+.text3 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-right: 4px;
+  color: #828386;
+}
+
+.text3o {
+  color: #00a5f4;
+}
+
+.text4 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #828386;
+}
+
+.text4i {
+  color: #00a5f4;
+}
+
+.text4o {
+  color: white;
+}
+
+.thumbup {
+  font-size: 13px;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.thumbupo {
+  color: #17a2b8;
+}
+
+.author-comment-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,3 +5,55 @@ background-color: #2C9543 !important;
 .footer-dark {
     //background-color: #13451e !important;
 }
+
+// User menu
+ .menu--account .nav {
+    flex-direction: row !important;
+    justify-content: flex-end;
+ }
+
+ // Author image at the top of the submission content 
+ .field--name-user-picture img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+ }
+
+ // Button inside the submission page at the top of the content
+ .comment-add a {
+     @extend .button; 
+     @extend .button--primary;
+ }
+
+
+ // Block on the sidebar second (submission content type)
+ .block-views-blocksubmission-info-box-block-1,
+ .block-views-blocksubmission-actions-block-1 {
+     background-color: #cccccc;
+     padding: 20px;
+ }
+ .block-views-blocksubmission-info-box-block-1 h2,
+ .block-views-blocksubmission-actions-block-1 h2 {
+     font-size: 16pt;
+     font-weight: bold;
+ }
+
+.region-sidebar-second .block {
+    margin-bottom: 20px;
+}
+
+//front page submission list 
+.view-submission-lists .card {
+    margin-bottom: 20px;
+}
+
+// flag 
+
+.flag-follow {
+    margin: 10px 0 10px;
+}
+.flag-follow a {
+    @extend .button; 
+    @extend .button--primary;
+}
+
